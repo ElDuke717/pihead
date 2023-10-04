@@ -1,15 +1,15 @@
 const posts = [
     {
-        title: "Blog Post Title #1",
+        title: "The first site ever hosted on a Raspberry Pi",
         date: "October 4, 2023",
         author: "Nick",
-        content: "This is the content of the first blog post. ..."
+        content: "I have never put together a self-hosted site before, so I decided to test out whether or not my unused Raspberry Pi 3B could do it.  Turns out it can!"
     },
     {
-        title: "Blog Post Title #2",
-        date: "October 3, 2023",
+        title: "Simple JavaScript Posts - need to build a backend",
+        date: "October 4, 2023",
         author: "Nick",
-        content: "This is the content of the second blog post. ..."
+        content: "Hosting all these posts will probably be way to difficult to manage with simple javascript, so we need to come up with a different solution!"
     },
     // ... add more posts as objects
 ];
