@@ -1,4 +1,7 @@
-const posts = [
+console.log('Welcome to Central Virginia Raspberry Pi!');
+
+// blog posts - add an object to add a post
+let posts = [
     {
         title: "The first site ever hosted on a Raspberry Pi",
         date: "October 4, 2023",
@@ -11,11 +14,21 @@ const posts = [
         author: "Nick",
         content: "Hosting all these posts will probably be way to difficult to manage with simple javascript, so we need to come up with a different solution!"
     },
-    // ... add more posts as objects
+    {
+        title: "The second day blogging",
+        date: "October 5, 2023",
+        author: "Nick",
+        content: "This is the second day blogging on the raspberry pi! It's definitely fall here, the leavees are just starting to turn and it was cool and foggy this morning in Chesterfield."
+    },
+// ... add more posts as objects
 ];
 
 
 const mainSection = document.querySelector("main");
+
+//sort posts based on the most recent
+posts = posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
 
 posts.map(post => {
     const article = document.createElement("article");
