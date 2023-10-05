@@ -10,6 +10,12 @@ body {
     color: #333;
 }
 
+header {
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+}
+
 header, nav, main, footer {
     max-width: 800px;
     margin: 20px auto;
@@ -51,7 +57,9 @@ footer {
     text-align: center;
 }
 
-#raspberry {
-    height: 25px;
-    width: 25px;
+.raspberry {
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+    margin-right:10px;
 }
