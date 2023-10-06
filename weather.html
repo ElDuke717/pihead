@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/img/icons/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <img src="assets/img/raspberry.png" class="raspberry" />
+        <h1>Weather Data</h1>
+        <img src="assets/img/raspberry.png" class="raspberry" />
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div>
+            <h1>Current Weather at Home</h1>
+            <p>coming soon</p>
+        </div>
+        <hr />
+    
+        <div class="weather-container">
+            <h1>Open Weather Map Data</h1>
+            <p>lat: 37.3856<p>
+            <p>lon: -77.6971</p>
+            <div class="weather-info">
+                <h2 id="city-name"></h2>
+                <p id="local-time-live"></p>
+                <p id="local-time-meas"></p>
+                <h3 class="temp-heading">Temperature</h3>
+                <p id="temperature-f"></p>
+                <p id="temperature-c"></p>
+                <p id="feels-like"></p>
+                <p id="description"></p>
+                <p id="humidity"></p>
+                <p id="pressure"></p>
+                <p id="wind-speed"></p>
+                <p id="wind-direction"></p>
+                <p id="rain"></p>
+                <p id="sunrise"></p>
+                <p id="sunset"></p>
+                
+            </div>
+        </div>
+        <hr />
+        <h2>5-Day Forecast</h2>
+        <div class="forecast-container" id="forecast-container">
+            
+            <!-- Forecast data will be populated here -->
+        </div>
+        
+    </main>
+
+    <footer>
+        <p>© 2023 Raspberry Pi 3 Projects. All rights reserved.</p>
+    </footer>
+    <script src="assets/js/weather.js"></script>
+</body>
+
+</html>
+

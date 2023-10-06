@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raspberry Pi 3 Website</title>
+    <title>CWB</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" href="assets/img/icons/favicon.ico" type="image/x-icon">
 </head>
@@ -12,7 +12,7 @@
 <body>
     <header>
         <img src="assets/img/raspberry.png" class="raspberry" />
-        <h1>Welcome to My Raspberry Pi 3 Website!</h1>
+        <h1>Chesterfield Weather and Blog</h1>
         <img src="assets/img/raspberry.png" class="raspberry" />
     </header>
 
@@ -20,16 +20,18 @@
         <ul>
             <li><a href="/">Home</a></li>
             <li><a href="blog.html">Blog</a></li>
+            <li><a href="weather.html">Weather</a></li>
             <li><a href="about.html">About</a></li>
+            
         </ul>
     </nav>
 
     <main>
         <section>
             <h2>Introduction</h2>
-            <p>This is a simple website hosted on a Raspberry Pi 3. There are no libraries or frameworks involved, jusrt simple HTMLS, CSS and JavaScript hosted on a tiny computer!</p>
+            <p>This is a simple website hosted on a Raspberry Pi 3. It is currently connected to the Open Weather API for local weather data and soon will host weather data taken from a Sense Hat weather station.</p>
         </section>
-
+    
         <section>
             <h2>Features</h2>
             <ul>
@@ -38,11 +40,59 @@
                 <li>Easy to customize</li>
             </ul>
         </section>
+        
+        <!-- Added this section for Raspberry Pi Metrics -->
+        <section>
+            <h2>System Metrics</h2>
+            <p>Data refreshes in <span id="countdown">10</span> seconds.</p>
+            <div id="metrics">
+                CPU Usage: <span id="cpu-usage"></span><br>
+                Memory Usage: <span id="memory-usage"></span><br>
+                Disk Space: <span id="disk-space"></span><br>
+                Temperature: <span id="temperature"></span><br>
+                Uptime: <span id="uptime"></span><br>
+                Disk R/W Rates: <span id="disk-rw"></span><br>
+                Active Connections: <span id="active-connections"></span><br>
+                CPU Frequency: <span id="cpu-frequency"></span><br>
+                GPU Memory: <span id="gpu-memory"></span><br>
+                Load Average: <span id="load-average"></span><br>
+                Network Usage: <span id="network-usage"></span><br>
+                Running Processes: <span id="running-processes"></span><br>
+            </div>
+        </section>
+        
+        <div class="metrics-explanation">
+            <h3>Metrics Explanation</h3>
+            <ul>
+                <li><strong>Disk R/W Rates:</strong> The rate at which data is being read from or written to the disk. If you see "iostat: not found", it indicates the required tool isn't installed on the Raspberry Pi.</li>
+                <li><strong>Active Connections:</strong> The number of active network connections to the Raspberry Pi.</li>
+                <li><strong>CPU Frequency:</strong> The current frequency at which the CPU is running. Typically measured in Hz.</li>
+                <li><strong>CPU Usage:</strong> The percentage of CPU currently being used by the system.</li>
+                <li><strong>Disk Space:</strong> The percentage of disk space currently being used.</li>
+                <li><strong>GPU Memory:</strong> Amount of memory currently being used by the GPU (Graphics Processing Unit).</li>
+                <li><strong>Load Average:</strong> Average system load over 1, 5, and 15 minutes intervals. A value of 1.0 means the CPU is fully utilized.</li>
+                <li><strong>Memory Usage:</strong> The percentage of total memory currently being used.</li>
+                <li>
+                    <strong>Network Usage:</strong> These numbers represent the rate of data being sent and received over the network. They might typically be measured in units like Megabits per second (Mbps) or Kilobits per second (Kbps). Here's a breakdown:
+                    <ul>
+                        <li><strong>1st Value (0.00):</strong> Average data rate received over the last minute.</li>
+                        <li><strong>2nd Value (0.00):</strong> Average data rate sent over the last minute.</li>
+                        <li><strong>3rd Value (0.21):</strong> Average data rate received over the last 5 minutes.</li>
+                        <li><strong>4th Value (0.34):</strong> Average data rate sent over the last 5 minutes.</li>
+                    </ul>
+                </li>
+                
+                <li><strong>Running Processes:</strong> The number of processes currently running on the Raspberry Pi.</li>
+                <li><strong>Temperature:</strong> Current temperature of the Raspberry Pi's CPU in degrees Celsius.</li>
+                <li><strong>Uptime:</strong> The duration for which the Raspberry Pi has been running continuously.</li>
+            </ul>
+        </div>
+        
     </main>
-
     <footer>
-        <p>© 2023 Raspberry Pi 3 Projects. All rights reserved.</p>
+        <p>© 2023 Chesterfield Weather Blog. All rights reserved.</p>
     </footer>
+    <script src="assets/js/metrics.js"></script>
 </body>
 
 </html>

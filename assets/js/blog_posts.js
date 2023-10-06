@@ -1,4 +1,3 @@
-console.log('Welcome to Central Virginia Raspberry Pi!');
 
 // blog posts - add an object to add a post
 let posts = [
@@ -19,6 +18,18 @@ let posts = [
         date: "October 5, 2023",
         author: "Nick",
         content: "This is the second day blogging on the raspberry pi! It's definitely fall here, the leavees are just starting to turn and it was cool and foggy this morning in Chesterfield."
+    },
+    {
+        title: "Displaying weather data and making the pi useful",
+        date: "October 6, 2023",
+        author: "Nick",
+        content: "I've spent the last couple of days updating the pi and figuring out how to display different pages on it.  The pages all need more up to date styling, but that will come later after a lot of the functionality is sorted.  The pi now has a weather data section where it pulls data from the Open Weather API for my specific location.  It now shows all the weather data that I'm interested in including the five day weather forecast.  In the near future, I will add important information about the health of the pi - CPU usage, temperature, disk space and so on.  I have a lot of big plans for it!"
+    },
+    {
+        title: "System Metrics Added!",
+        date: "October 6, 2023",
+        author: "Nick",
+        content: "I went ahead and added all the interesting system metrics to the homepage that I could think of.  It will make the main page a bit more useful and will also have data that can be used in case the site goes down."
     },
 // ... add more posts as objects
 ];
