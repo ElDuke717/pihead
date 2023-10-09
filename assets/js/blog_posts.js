@@ -31,6 +31,12 @@ let posts = [
         author: "Nick",
         content: "I went ahead and added all the interesting system metrics to the homepage that I could think of.  It will make the main page a bit more useful and will also have data that can be used in case the site goes down."
     },
+    {
+        title: "Cooler Weather and System Metrics Now Working!",
+        date: "October 9, 2023",
+        author: "Nick",
+        content: "The host computer (Raspberry Pi 3) metrics have now been fixed after much overcomplication.  Now, anyone who visits this site can now see what's going on with the Pi in real time (well, every 10 seconds). \n The weather in Chesterfield has turned quite a bit cooler and now it really is starting to feel like fall.  It will be interesting when on site data collection will start so that users can see the how the weather has changed locally, and eventuall there will be graphs and charts depicting the weather trends."
+    },
 // ... add more posts as objects
 ];
 

@@ -1,5 +1,5 @@
 /* Reset some default browser styles */
-body, h1, h2, p, ul, li {
+body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
 }
@@ -8,12 +8,14 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
+    font-size: 18px;  /* Set a default font-size */
+    line-height: 1.6;
 }
 
 header {
     display: flex;
-    justify-content: center;
-    align-items: space-between;
+    justify-content: space-between;  /* Fix for the alignment in the header */
+    align-items: center;
 }
 
 header, nav, main, footer {
@@ -68,6 +70,25 @@ footer {
     margin:5px;
 }
 
+/* Updated list styles */
+ul {
+    list-style-type: disc;  /* Add bullets to the list */
+}
+
 li {
-    margin-left: 50px;
+    margin: 10px 0;  /* Add some vertical margin for readability */
+}
+
+/* For nested lists */
+li ul {
+    margin-left: 20px;  /* Indentation for nested lists */
+}
+
+#metrics div {
+    margin: 10px 0;
+    font-size: 1.1em; /* Slightly larger font for metrics */
+}
+
+.metrics-explanation {
+    margin-top: 20px;
 }

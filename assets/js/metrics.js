@@ -8,23 +8,22 @@ function getMetrics() {
     // Reset the countdown to 10 seconds every time we fetch the metrics
     countdown = 10;
     updateCountdown();
-
-    fetch('http://localhost:5000/metrics')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('cpu-usage').textContent = data.cpu_usage;
-            document.getElementById('memory-usage').textContent = data.memory_usage;
-            document.getElementById('disk-space').textContent = data.disk_space;
-            document.getElementById('temperature').textContent = data.temperature;
-            document.getElementById('uptime').textContent = data.uptime;
-            document.getElementById('disk-rw').textContent = data["Disk R/W Rates:"];
-            document.getElementById('active-connections').textContent = data.active_connections;
-            document.getElementById('cpu-frequency').textContent = data.cpu_frequency;
-            document.getElementById('gpu-memory').textContent = data.gpu_memory;
-            document.getElementById('load-average').textContent = data.load_average;
-            document.getElementById('network-usage').textContent = data.network_usage;
-            document.getElementById('running-processes').textContent = data.running_processes;
-        })
+    fetch('/assets/data/metrics.json')
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('cpu-usage').textContent = data['CPU Usage'];
+        document.getElementById('memory-usage').textContent = data['Memory Usage'];
+        document.getElementById('disk-space').textContent = data['Disk Space Used'];
+        document.getElementById('temperature').textContent = data['Temperature'];
+        document.getElementById('uptime').textContent = data['Uptime'];
+        document.getElementById('disk-rw').textContent = data['Disk R/W Rates'];
+        document.getElementById('active-connections').textContent = data['Active Network Connections'];
+        document.getElementById('cpu-frequency').textContent = data['CPU Frequency'];
+        document.getElementById('gpu-memory').textContent = data['GPU Memory Usage'];
+        document.getElementById('load-average').textContent = data['Load Average (1min 5min 15min)'];
+        document.getElementById('network-usage').textContent = data['Network Usage (Incoming Outgoing Bytes/s)'];
+        document.getElementById('running-processes').textContent = data['Running Processes'];
+    })
         .catch(error => console.error('Error fetching metrics:', error));
 }
 

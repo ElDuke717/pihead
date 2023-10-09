@@ -12,7 +12,7 @@
 <body>
     <header>
         <img src="assets/img/raspberry.png" class="raspberry" />
-        <h1>Chesterfield Weather and Blog</h1>
+        <h1>Chesterfield Weather Blog</h1>
         <img src="assets/img/raspberry.png" class="raspberry" />
     </header>
 
@@ -32,19 +32,10 @@
             <p>This is a simple website hosted on a Raspberry Pi 3. It is currently connected to the Open Weather API for local weather data and soon will host weather data taken from a Sense Hat weather station.</p>
         </section>
     
-        <section>
-            <h2>Features</h2>
-            <ul>
-                <li>Lightweight</li>
-                <li>Responsive</li>
-                <li>Easy to customize</li>
-            </ul>
-        </section>
-        
+                
         <!-- Added this section for Raspberry Pi Metrics -->
         <section>
             <h2>System Metrics</h2>
-            <p>Data refreshes in <span id="countdown">10</span> seconds.</p>
             <div id="metrics">
                 CPU Usage: <span id="cpu-usage"></span><br>
                 Memory Usage: <span id="memory-usage"></span><br>
@@ -59,6 +50,7 @@
                 Network Usage: <span id="network-usage"></span><br>
                 Running Processes: <span id="running-processes"></span><br>
             </div>
+            <p>Data refreshes in <span id="countdown">10</span> seconds.</p>
         </section>
         
         <div class="metrics-explanation">
@@ -87,6 +79,20 @@
                 <li><strong>Uptime:</strong> The duration for which the Raspberry Pi has been running continuously.</li>
             </ul>
         </div>
+        <section>
+            <h2>Raspberry Pi 3 Model B Specifications</h2>
+            <ul>
+                <li><strong>Processor:</strong> Quad-core ARM Cortex-A53 at 1.2GHz</li>
+                <li><strong>Memory:</strong> 1GB LPDDR2 (900 MHz)</li>
+                <li><strong>GPU:</strong> Broadcom VideoCore IV with OpenGL ES 2.0 and 1080p30 H.264 high-profile decode</li>
+                <li><strong>Storage:</strong> MicroSD card slot</li>
+                <li><strong>Networking:</strong> 10/100 Ethernet and 2.4GHz 802.11n Wi-Fi</li>
+                <li><strong>Bluetooth:</strong> Bluetooth 4.2 (Classic and LE)</li>
+                <li><strong>Ports:</strong> 4 x USB 2.0, 40 GPIO pins, HDMI, 3.5mm audio jack, CSI (camera), DSI (display)</li>
+                <li><strong>Power:</strong> 5V/2.5A DC</li>
+            </ul>
+        </section>
+        
         
     </main>
     <footer>

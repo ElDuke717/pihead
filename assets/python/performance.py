@@ -1,15 +1,11 @@
-from flask import Flask, jsonify
-from flask_cors import CORS
+import json
 import subprocess
+import time
 
-app = Flask(__name__)
+def get_output(command):
+    return subprocess.getoutput(command)
 
-CORS(app)
-
-print('getting metrics')
-
-@app.route('/metrics')
-def get_metrics():
+def fetch_metrics():
     def get_output(command):
         return subprocess.getoutput(command)
 
@@ -43,9 +39,7 @@ def get_metrics():
 
     # Storage Metrics
     disk_rw_rates = get_output("iostat -d -y 1 1 | grep mmcblk0 | awk '{print \"Read: \"$3\" kB/s, Write: \"$4\" kB/s\"}'")
-
-
-    return jsonify({
+    metrics = {
         'CPU Usage': cpu_usage,
         'Memory Usage': memory_usage,
         'Disk Space Used': disk_space,
@@ -58,7 +52,12 @@ def get_metrics():
         'CPU Frequency': cpu_frequency,
         'GPU Memory Usage': gpu_memory,
         'Disk R/W Rates': disk_rw_rates
-    })
+    }
+    return metrics
 
-if __name__ == '__main__':
-    app.run(host='192.168.1.78', port=5000)
+if __name__ == "__main__":
+    while True:
+        metrics_data = fetch_metrics()
+        with open('../data/metrics.json', 'w') as f:
+            json.dump(metrics_data, f)
+        time.sleep(5)  # Collect data every 10 seconds
