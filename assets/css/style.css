@@ -23,7 +23,8 @@ header, nav, main, footer {
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
 header h1 {
@@ -91,4 +92,19 @@ li ul {
 
 .metrics-explanation {
     margin-top: 20px;
+}
+
+.refresh {
+    font-size: 10px;
+}
+
+.explanation, .specs {
+    margin-left: 20px;
+}
+
+.forecast-day {
+    border: 1px solid grey ;
+    margin: 20px;
+    padding: 5px;
+    width: 65%;
 }

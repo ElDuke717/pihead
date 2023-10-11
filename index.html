@@ -50,13 +50,13 @@
                 Network Usage: <span id="network-usage"></span><br>
                 Running Processes: <span id="running-processes"></span><br>
             </div>
-            <p>Data refreshes in <span id="countdown">10</span> seconds.</p>
+            <p class="refresh">Data refreshes in <span id="countdown">10</span> seconds.</p>
         </section>
         
         <div class="metrics-explanation">
             <h3>Metrics Explanation</h3>
-            <ul>
-                <li><strong>Disk R/W Rates:</strong> The rate at which data is being read from or written to the disk. If you see "iostat: not found", it indicates the required tool isn't installed on the Raspberry Pi.</li>
+            <ul class="explanation">
+                <li><strong>Disk R/W Rates:</strong> The rate at which data is being read from or written to the disk.</li>
                 <li><strong>Active Connections:</strong> The number of active network connections to the Raspberry Pi.</li>
                 <li><strong>CPU Frequency:</strong> The current frequency at which the CPU is running. Typically measured in Hz.</li>
                 <li><strong>CPU Usage:</strong> The percentage of CPU currently being used by the system.</li>
@@ -81,7 +81,7 @@
         </div>
         <section>
             <h2>Raspberry Pi 3 Model B Specifications</h2>
-            <ul>
+            <ul class="specs">
                 <li><strong>Processor:</strong> Quad-core ARM Cortex-A53 at 1.2GHz</li>
                 <li><strong>Memory:</strong> 1GB LPDDR2 (900 MHz)</li>
                 <li><strong>GPU:</strong> Broadcom VideoCore IV with OpenGL ES 2.0 and 1080p30 H.264 high-profile decode</li>

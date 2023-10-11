@@ -37,6 +37,12 @@ let posts = [
         author: "Nick",
         content: "The host computer (Raspberry Pi 3) metrics have now been fixed after much overcomplication.  Now, anyone who visits this site can now see what's going on with the Pi in real time (well, every 10 seconds). \n The weather in Chesterfield has turned quite a bit cooler and now it really is starting to feel like fall.  It will be interesting when on site data collection will start so that users can see the how the weather has changed locally, and eventuall there will be graphs and charts depicting the weather trends."
     },
+    {
+        title: "Switched Weather Data to NOAA",
+        date: "October 11, 2023",
+        author: "Nick",
+        content: "The weather data is now being pulled from the NOAA weather API.  This data is more accurate, and since it's freely available, there's no need for an API key.  The hope is that this data will be a better complement to the very local data that will be provided by the onsite weather station that will be installed soon."
+    },
 // ... add more posts as objects
 ];
 
