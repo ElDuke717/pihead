@@ -103,8 +103,37 @@ li ul {
 }
 
 .forecast-day {
-    border: 1px solid grey ;
-    margin: 20px;
-    padding: 5px;
-    width: 65%;
+	border: 1px solid grey;
+	margin: 20px;
+	padding: 5px;
+	width: 75%;
+	display: flex;
+	justify-content: space-evenly;
 }
+
+#water-message {
+    border: 2px solid rgb(56, 41, 41);
+    background-color:  rgb(253, 84, 84);
+}
+
+.section-heading {
+    color: #005577;
+  }
+  
+  .data-value {
+    color: #ff9500;
+    font-weight: bold;
+  }
+  
+  #water-message {
+    background-color: #f2dede;
+    color: #a94442;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ebccd1;
+    border-radius: 4px;
+  }
+  
+  .weather-img {
+    border-radius: 5px;
+  }

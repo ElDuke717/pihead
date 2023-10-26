@@ -1,70 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" href="assets/img/icons/favicon.ico" type="image/x-icon">
-</head>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" href="assets/img/icons/favicon.ico" type="image/x-icon" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <img src="assets/img/raspberry.png" class="raspberry" />
-        <h1>Weather Data</h1>
-        <img src="assets/img/raspberry.png" class="raspberry" />
+      <img src="assets/img/raspberry.png" class="raspberry" />
+      <h1>Weather Data</h1>
+      <img src="assets/img/raspberry.png" class="raspberry" />
     </header>
 
     <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="weather.html">Weather</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="weather.html">Weather</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
     </nav>
 
     <main>
-        <div>
-            <h1>Current Weather at Home</h1>
-            <p>coming soon...pending weather station install.</p>
-        </div>
-        <hr />
-    
-        <div class="weather-container">
-            <h1>NOAA Weather Data for Chesterfield, VA</h1>
-            <p>lat: 37.3856<p>
-            <p>lon: -77.6971</p>
-            <div class="weather-info">
-                <h2 id="city-name"></h2>
-                <p id="local-time-live"></p>
-                <p id="local-time-meas"></p>
-                <p id="temperature-f"></p>
-                <p id="temperature-c"></p>
-                <p id="description"></p>
-                <p id="humidity"></p>
-                <p id="wind-speed"></p>
-                <p id="wind-direction"></p>
-                <p id="sunrise"></p>
-                <p id="sunset"></p>
+      <div>
+        <h2 id="local-time-live"></h2>
+        <h2 id="local-time-meas"></h2>
+        <div id="home-weather-data"></div>
+      </div>
+      <hr />
 
-            </div>
+      <div class="weather-container">
+        <h1>NOAA Weather Data</h1>
+
+        <div class="weather-info">
+          <h2 id="city-name"></h2>
+          <p>lat: 37.38</p>
+          <p></p>
+          <p>lon: -77.69</p>
+          <h3 id="temperature-f"></h3>
+          <h3 id="temperature-c"></h3>
+          <p id="description"></p>
+          <p id="humidity"></p>
+          <p id="wind-speed"></p>
+          <p id="wind-direction"></p>
         </div>
-        <hr />
-        <h2>Upcoming Weather Forecast</h2>
-        <div class="forecast-container" id="forecast-container">
-            <!-- Forecast data will be populated here -->
-        </div>
-        
+      </div>
+      <hr />
+      <h2>Upcoming Weather Forecast</h2>
+      <div class="forecast-container" id="forecast-container">
+        <!-- Forecast data will be populated here -->
+      </div>
     </main>
 
     <footer>
-        <p>© 2023 Chesterfield Weather Blog. All rights reserved.</p>
+      <p>© 2023 Chesterfield Weather Blog. All rights reserved.</p>
     </footer>
     <script src="assets/js/weather.js"></script>
-</body>
-
+    <script src="assets/js/ambient-weather_public.js"></script>
+  </body>
 </html>
-
-

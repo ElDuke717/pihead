@@ -8,9 +8,13 @@ function getMetrics() {
     // Reset the countdown to 10 seconds every time we fetch the metrics
     countdown = 10;
     updateCountdown();
-    fetch('/assets/data/metrics.json')
-    .then(response => response.json())
-    .then(data => {
+    //added cache-busting parameters
+    // Added cache-busting parameters
+    const cacheBuster = 't=' + new Date().getTime();
+    fetch('/assets/data/metrics.json?' + cacheBuster)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);;
         document.getElementById('cpu-usage').textContent = data['CPU Usage'];
         document.getElementById('memory-usage').textContent = data['Memory Usage'];
         document.getElementById('disk-space').textContent = data['Disk Space Used'];
